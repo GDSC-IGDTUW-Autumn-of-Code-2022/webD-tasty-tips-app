@@ -1,7 +1,19 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tasty-tips
+This a a recipe app made in ReactJS, the recipes are fetched from Edamam API. 
+Search of any ingridient and get top 10 items you can make with it
 
-This is a recipe app which uses edamam recipe API to fetch for results. The user can enter any ingredient in the search bar and he/she will be provided with 10 recipes that can be made with that ingredient. 
+## Tech stack used
+* ReactJS
 
-It is hosted on github pages. 
+## learn about APIs
+[ReactJS in one video](https://youtu.be/RGKi6LSPDLU)
+
+## Some screenshots
+
+
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=17htOSK_ptwEbwvwe_LQtylr6CH3XLUXG)
+
+
+
