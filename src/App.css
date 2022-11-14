@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-.App{
+.App {
   min-height: 100vh;
   background-image: linear-gradient(to right, #d4f5ef 0%, #f3e5f7 100%);
 }
-.search-form{
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.search-form {
   min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.heading{
+.heading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +24,12 @@
   font-size: 55px;
   padding: 20px;
 }
-.search-bar{
+.search-bar {
   width: 40%;
   border: none;
   padding: 10px;
 }
-.search-btn:hover{
+.search-btn:hover {
   background: rgb(255, 238, 170);
 }
 .search-btn {
@@ -31,7 +37,7 @@
   border: none;
   padding: 10px 20px;
 }
-.container{
+.container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
