@@ -4,7 +4,10 @@
   min-height: 100vh;
   background-image: linear-gradient(to right, #d4f5ef 0%, #f3e5f7 100%);
 }
-
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
 .search-form {
   min-height: 10vh;
   display: flex;
@@ -37,7 +40,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -56,9 +58,4 @@
   color: white;
   border-color: #0d6efd;
   font-size: medium;
-}
-
-html,
-body {
-  font-family: "Poppins", sans-serif;
 }
