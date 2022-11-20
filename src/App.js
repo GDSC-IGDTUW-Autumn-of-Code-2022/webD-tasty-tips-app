@@ -2,8 +2,14 @@ import { useEffect } from "react";
 import "./App.css";
 import { useState } from "react";
 import Recipe from "./Recipe";
+import Navbar from './components/Navbar';
 
 function App() {
+
+ 
+
+
+
   const [visible, setVisible] = useState(3);
 
   const showMoreItems = () => {
@@ -41,18 +47,18 @@ function App() {
     setQuery(search);
   };
 
-  const[mode,setMode]=useState("light");
-  const[myStyle,setStyle]=useState({
-    color:"black"
+  const [mode, setMode] = useState("light");
+  const [myStyle, setStyle] = useState({
+    color: "black"
   });
-  const[cardStyle,setCard]=useState({
-    display:"inline-block",
-    width:300,
-    marginLeft:100,
-    marginTop:5,
-    marginRight:5
+  const [cardStyle, setCard] = useState({
+    display: "inline-block",
+    width: 300,
+    marginLeft: 100,
+    marginTop: 5,
+    marginRight: 5
 
-    
+
   })
   /*const[imageStyle,setImage]=useState({
     height:200
@@ -60,60 +66,64 @@ function App() {
 
     
   })*/
-  const toggleMode=()=>{
-    if(mode==="light")
-    {setMode("dark");
-    document.querySelector(".App").style.backgroundImage="radial-gradient(black,black,black)";
-      
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.querySelector(".App").style.backgroundImage = "radial-gradient(black,black,black)";
+
       setStyle({
-        color:"white"
+        color: "white"
       })
       setCard({
-        display:"inline-block",
-        borderWidth:2,
-        borderStyle:"solid",
-        borderColor:"white",
-        width:300,
-        marginLeft:100,
-        marginTop:5,
-        marginRight:5,
-        backgroundColor:"black"
-    
-        
+        display: "inline-block",
+        borderWidth: 2,
+        borderStyle: "solid",
+        borderColor: "white",
+        width: 300,
+        marginLeft: 100,
+        marginTop: 5,
+        marginRight: 5,
+        backgroundColor: "black"
+
+
       })
-     
-      
+
+
     }
-    else{
+    else {
       setMode("light");
-    document.querySelector(".App").style.backgroundImage="linear-gradient(rgb(243	229	247),rgb(212	245	239),white)";
-  
-      
+      document.querySelector(".App").style.backgroundImage = "linear-gradient(rgb(243	229	247),rgb(212	245	239),white)";
+
+
       setStyle(
         {
-          color:"black"
+          color: "black"
         }
       )
       setCard({
-        display:"inline-block",
-       /* borderWidth:2,
-        borderStyle:"solid",
-        borderColor:"black",*/
-        width:300,
-        marginLeft:100,
-        marginTop:5,
-        marginRight:5
-    
-        
+        display: "inline-block",
+        /* borderWidth:2,
+         borderStyle:"solid",
+         borderColor:"black",*/
+        width: 300,
+        marginLeft: 100,
+        marginTop: 5,
+        marginRight: 5
+
+
       })
-    
-     
+
+
     }
-  }  
+  }
 
 
   return (
     <div className="App">
+      <Navbar/>
+
+
+
       <h1 className="heading" style={myStyle}>Tasty Tips</h1>
       <form onSubmit={getSearch} className="search-form">
         <input
@@ -126,8 +136,8 @@ function App() {
           Search
         </button>
         <div class="form-check form-switch">
-      <input class="form-check-input ms-5" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={toggleMode}></input>
-      </div>
+          <input class="form-check-input ms-5" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={toggleMode}></input>
+        </div>
       </form>
       <div className="container">
         {recipes.slice(0, visible).map((r) => (
@@ -140,7 +150,7 @@ function App() {
             ingredients={r.recipe.ingredients}
             myStyle={myStyle}
             cardStyle={cardStyle}
-       
+
           />
         ))}
       </div>
