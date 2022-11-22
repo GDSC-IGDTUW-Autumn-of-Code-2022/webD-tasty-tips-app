@@ -47,6 +47,7 @@ function App() {
     setQuery(search);
   };
 
+
   const [mode, setMode] = useState("light");
   const [myStyle, setStyle] = useState({
     color: "black"
@@ -130,7 +131,13 @@ function App() {
           className="search-bar"
           type="text"
           value={search}
-          onChange={handleSearch}
+          onChange={handleSearch} 
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+                setSearch(e.target.value);
+                // console.log("search: ", e.target.value)
+            }
+        }}
         ></input>
         <button className="search-btn" type="submit">
           Search
