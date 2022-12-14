@@ -2,14 +2,15 @@
 
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #d4f5ef 0%, #f3e5f7 100%);
-
+  background-image: linear-gradient(to right, #aa8b56 0%, #f0ebce 100%);
 }
 .search-form {
   min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
+  transition: 1s;
 }
 .heading {
   display: flex;
@@ -18,21 +19,39 @@
   font-family: pacifico;
   font-size: 55px;
   padding: 20px;
+  margin-top: 50px;
 }
 .search-bar {
   width: 40%;
   border: none;
   padding: 10px;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  transition: 0.5s;
+}
+.search-bar:focus {
+  outline: 5px solid #4e6c50;
+}
+.search-form:hover {
+  transform: scale(1.1);
 }
 .search-btn:hover {
   background: rgb(255, 238, 170);
 }
 .search-btn {
-  background: rgb(162, 235, 219);
+  background: #4e6c50;
   border: none;
   padding: 10px 20px;
+  border-radius: 0 15px 15px 0;
+  transition: 0.5s;
+}
+.form-check {
+  position: absolute;
+  right: 2vw;
+  top: 12.5vh;
 }
 .container {
+  /* margin-top: 50px; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -43,18 +62,40 @@
   justify-content: center;
   margin-top: 40px;
   padding-bottom: 40px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .button-container:hover {
   transform: scale(1.1);
 }
+.card {
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card-body {
+  outline: none;
+  margin: 0;
+  background-color: #4e6c50;
+}
+
+.see-recipe-btn {
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #395144;
+}
+.see-recipe-btn:hover {
+  transform: scale(1.1);
+  background-color: #395144;
+}
 
 .loadMoreButton {
-  border-radius: 5px;
-  background-color: #0d6efd;
+  border-radius: 10px;
+  background-color: #4e6c50;
   color: white;
-  border-color: #0d6efd;
+  border-color: #4e6c50;
   font-size: medium;
 }
 

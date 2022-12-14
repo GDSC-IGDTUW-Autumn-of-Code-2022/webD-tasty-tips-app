@@ -2,14 +2,9 @@ import { useEffect } from "react";
 import "./App.css";
 import { useState } from "react";
 import Recipe from "./Recipe";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 
 function App() {
-
- 
-
-
-
   const [visible, setVisible] = useState(3);
 
   const showMoreItems = () => {
@@ -50,17 +45,16 @@ function App() {
 
   const [mode, setMode] = useState("light");
   const [myStyle, setStyle] = useState({
-    color: "black"
+    color: "black",
   });
   const [cardStyle, setCard] = useState({
     display: "inline-block",
     width: 300,
     marginLeft: 100,
     marginTop: 5,
-    marginRight: 5
-
-
-  })
+    marginRight: 5,
+    backgroundColor: "#4e6c50",
+  });
   /*const[imageStyle,setImage]=useState({
     height:200
     
@@ -70,62 +64,48 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.querySelector(".App").style.backgroundImage = "radial-gradient(black,black,black)";
+      document.querySelector(".App").style.backgroundImage =
+        "radial-gradient(black,black,black)";
 
       setStyle({
-        color: "white"
-      })
+        color: "white",
+      });
       setCard({
         display: "inline-block",
-        borderWidth: 2,
-        borderStyle: "solid",
-        borderColor: "white",
         width: 300,
         marginLeft: 100,
         marginTop: 5,
         marginRight: 5,
-        backgroundColor: "black"
-
-
-      })
-
-
-    }
-    else {
+        backgroundColor: "black",
+      });
+    } else {
       setMode("light");
-      document.querySelector(".App").style.backgroundImage = "linear-gradient(rgb(243	229	247),rgb(212	245	239),white)";
+      document.querySelector(".App").style.backgroundImage =
+        "linear-gradient(to right, #aa8b56 0%, #f0ebce 100%)";
 
-
-      setStyle(
-        {
-          color: "black"
-        }
-      )
+      setStyle({
+        color: "black",
+      });
       setCard({
         display: "inline-block",
         /* borderWidth:2,
-         borderStyle:"solid",
-         borderColor:"black",*/
+         borderStyle:"solid",*/
+        backgroundColor: "#4e6c50",
         width: 300,
         marginLeft: 100,
         marginTop: 5,
-        marginRight: 5
-
-
-      })
-
-
+        marginRight: 5,
+      });
     }
-  }
-
+  };
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
 
-
-
-      <h1 className="heading" style={myStyle}>Tasty Tips</h1>
+      <h1 className="heading" style={myStyle}>
+        Tasty Tips
+      </h1>
       <form onSubmit={getSearch} className="search-form">
         <input
           className="search-bar"
@@ -142,10 +122,17 @@ function App() {
         <button className="search-btn" type="submit">
           Search
         </button>
-        <div class="form-check form-switch">
-          <input class="form-check-input ms-5" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={toggleMode}></input>
-        </div>
       </form>
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input ms-5"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+          onClick={toggleMode}
+        ></input>
+      </div>
       <div className="container">
         {recipes.slice(0, visible).map((r) => (
           <Recipe
@@ -157,7 +144,6 @@ function App() {
             ingredients={r.recipe.ingredients}
             myStyle={myStyle}
             cardStyle={cardStyle}
-
           />
         ))}
       </div>
