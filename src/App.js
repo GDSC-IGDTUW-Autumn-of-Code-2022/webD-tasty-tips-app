@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import Recipe from "./Recipe";
 import Navbar from "./components/Navbar";
+import mainLogo from'./components/icon.png';
 
 function App() {
   const [visible, setVisible] = useState(3);
@@ -102,7 +103,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-
+      <img alt="" src={mainLogo} width="100" height="100" className="logo" text-align="center"/>
       <h1 className="heading" style={myStyle}>
         Tasty Tips
       </h1>
