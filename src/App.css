@@ -2,7 +2,7 @@
 
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #aa8b56 0%, #f0ebce 100%);
+  background-image: linear-gradient(to right, #FFffff 0%, #B4CEFF 100%);
 }
 .search-form {
   min-height: 10vh;
@@ -18,8 +18,8 @@
   align-items: center;
   font-family: pacifico;
   font-size: 55px;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 10px;
+  margin-top: 5px;
 }
 .search-bar {
   width: 40%;
@@ -30,7 +30,7 @@
   transition: 0.5s;
 }
 .search-bar:focus {
-  outline: 5px solid #4e6c50;
+  outline: 5px solid #4B3100;
 }
 .search-form:hover {
   transform: scale(1.1);
@@ -39,8 +39,9 @@
   background: rgb(255, 238, 170);
 }
 .search-btn {
-  background: #4e6c50;
+  background: #4B3100;
   border: none;
+  color: white;
   padding: 10px 20px;
   border-radius: 0 15px 15px 0;
   transition: 0.5s;
@@ -81,21 +82,26 @@
 }
 
 .see-recipe-btn {
+  width: 265px;
+  align-items: center;
   border: none;
   border-radius: 10px;
   transition: 0.3s;
-  background-color: #395144;
+  background-color: #B193AF;
+  
 }
 .see-recipe-btn:hover {
   transform: scale(1.1);
-  background-color: #395144;
+  background-color: #B193AF;
 }
 
 .loadMoreButton {
   border-radius: 10px;
-  background-color: #4e6c50;
+  height:60px;
+  width: 200px;
+  background-color: #4B3100;
   color: white;
-  border-color: #4e6c50;
+  border-color: #4B3100;
   font-size: medium;
 }
 
@@ -103,3 +109,14 @@ html,
 body {
   font-family: "Poppins", sans-serif;
 }
+.logo {
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
