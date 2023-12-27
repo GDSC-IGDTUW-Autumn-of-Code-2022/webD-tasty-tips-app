@@ -1,9 +1,7 @@
 
 # Tasty-tips
 
-<p align="center">
-  <img src= "https://user-images.githubusercontent.com/79600026/200431231-50fad61c-3e13-49f6-8b63-f9fcdc07604a.jpg" alt="12" width="350"/>
-</p>
+
 
 
 This a a recipe app made in ReactJS, the recipes are fetched from Edamam API. 
@@ -54,16 +52,16 @@ You can refer to the following resources on Git and Github to get started and co
 
 
 ## Prizes 
-- Top 3 contributors 🍁<br/> 
+- Top 3 contributors ❄️<br/> 
 Special prize | Swag Kits | Shoutouts on Social Media handles | Certificate of appreciation
 
-- Top 5 female contributors 🍁 <br/>
+- Top 5 contributors ❄️ <br/>
 Special prize | Swag Kits | Shoutouts on Social Media handles | Certificate of appreciation
 
-- Top 10 contributors 🍁 <br/>
+- Top 10 contributors ❄️ <br/>
 Shoutouts on Social Media handles | Swag kits and lots of exciting goodies | Certificate of appreciation
 
-- Top 25 contributors 🍁 <br/>
+- Top 25 contributors ❄️ <br/>
 Swag kits and lots of exciting goodies | Certificate of appreciation
 
 - All the contributors will get a certificate of appreciation for their first successful pull request
